@@ -25,7 +25,6 @@ body {
 }
 .site-header { border-color: var(--line); }
 .brand { font-weight: 550; letter-spacing: -.7px; }
-.brand-icon { background: #c6d3ff; color: #10192e; }
 .site-header nav, .header-contact { color: #c1cce0; }
 .header-contact { border-color: #8092b2; }
 .site-header nav a:hover, .text-link:hover { color: #fff; }
