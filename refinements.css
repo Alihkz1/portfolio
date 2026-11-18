@@ -1,0 +1,130 @@
+/* Portrait-led editorial layout. No remote fonts or animation dependencies. */
+body { background: #f8f7f2; }
+.site-header { border-bottom: 1px solid #dedfd580; }
+.site-header nav a { position: relative; padding-block: 10px; }
+.site-header nav a::after { content: ''; position: absolute; bottom: 1px; left: 0; width: 100%; height: 2px; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.site-header nav a:hover::after, .site-header nav a:focus-visible::after { transform: scaleX(1); }
+.hero { gap: 64px; padding-block: 76px 88px; }
+.hero-description { font-size: 15px; line-height: 1.85; max-width: 420px; }
+.hero .button { border-radius: 100px; box-shadow: 0 5px 15px #24292012; }
+.button, .social-links a, .header-contact, .skills span { transition: transform .25s ease, background .25s ease, color .25s ease; }
+.button:hover { transform: translateY(-3px); }
+.button span, .text-link span, .social-links a span { display: inline-block; transition: transform .25s ease; }
+.button:hover span, .text-link:hover span, .social-links a:hover span { transform: translate(3px, -3px); }
+.hero .social-links { padding-top: 7px; }
+.portrait-art { min-width: 0; height: 515px; background: none; isolation: isolate; }
+.portrait-art::before { content: ''; position: absolute; width: 95%; aspect-ratio: 1; background: #e6e9db; border-radius: 50%; z-index: -2; }
+.portrait-outline { position: absolute; inset: 7% -1% 7% 1%; border: 1px solid #c9cebc; border-radius: 48% 52% 45% 55%; transform: rotate(-12deg); z-index: -1; }
+.portrait-frame { position: relative; margin: 0; width: 90%; aspect-ratio: .87; max-height: 470px; border: 7px solid #fff; border-radius: 150px 150px 24px 24px; overflow: hidden; transform: rotate(3deg); box-shadow: 0 24px 60px #30392120; }
+.portrait-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 43%; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.portrait-frame:hover img { transform: scale(1.035); }
+.portrait-frame::after { content: ''; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, #07110be0); pointer-events: none; }
+.portrait-frame figcaption { position: absolute; z-index: 1; bottom: 27px; left: 25px; color: white; transform: rotate(-3deg); }
+.portrait-frame figcaption span { display: block; font: 9px 'Segoe UI', sans-serif; letter-spacing: .15em; color: #d3dec9; margin-bottom: 9px; }
+.portrait-frame figcaption strong { font-size: 29px; font-weight: 550; letter-spacing: -.8px; }
+.portrait-mark { position: absolute; top: 1%; right: -3%; color: var(--orange); font-size: 100px; line-height: 1; filter: drop-shadow(0 6px 0 #f8f7f2); animation: portrait-turn 22s linear infinite; }
+.portrait-note { position: absolute; left: -26px; bottom: 67px; padding: 17px 23px; border: 1px solid #e1e4d8; border-radius: 14px; background: #fffffff0; box-shadow: 0 12px 30px #28321d12; font-size: 12px; line-height: 1.6; transform: rotate(-5deg); }
+.portrait-note > span { float: left; margin: 3px 15px 0 0; font-size: 23px; color: #74855c; }
+.portrait-index { position: absolute; bottom: -12px; font: 9px monospace; letter-spacing: .17em; color: #8b937e; }
+.discipline-strip { background: #efefe6; border-color: #e3e5d9; }
+.repo-toolbar input, .repo-toolbar select { border-radius: 12px; background-color: #fff; }
+.repo-card { border-radius: 18px; background: #fffefa; padding: 26px; border-color: #e0e3d6; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.repo-card:hover { transform: translateY(-5px); border-color: #b9c3a5; box-shadow: 0 16px 32px #3945290c; }
+.repo-card h3 { line-height: 1.4; }
+.repo-icon { border-radius: 10px; }
+.repo-card .repo-description { font-size: 13px; line-height: 1.85; }
+.about { background: #eeefe6; border-block: 1px solid #e2e5d7; }
+.about-art { border-radius: 24px; }
+.skills span { border-radius: 30px; background: #ffffff70; }
+.skills span:hover { background: #fff; transform: translateY(-2px); }
+.process-grid article { position: relative; transition: border-color .25s ease; }
+.process-grid article:hover { border-color: var(--orange); }
+.process-grid .step { color: #8a9675; font-size: 13px; }
+.contact { border-radius: 26px; position: relative; overflow: hidden; }
+.contact::before { content: ''; position: absolute; width: 350px; height: 350px; right: -170px; top: -210px; border: 1px solid #a6b68a40; border-radius: 50%; box-shadow: 0 0 0 38px #a6b68a0a, 0 0 0 76px #a6b68a07; pointer-events: none; }
+.contact-bottom .email { transition: color .25s ease; }
+.contact-bottom .email:hover { color: #d3e0bb; }
+/* Larger reading sizes on both desktop and mobile. */
+.site-header nav { font-size: 15px; }
+.header-contact { font-size: 14px; }
+.brand { font-size: 24px; }
+.hero .intro { font-size: 23px; }
+.hero h1 { font-size: clamp(48px, 5vw, 71px); }
+.hero-description { font-size: 17px; }
+.hero .button { font-size: 14px; }
+.hero .text-link, .social-links a { font-size: 13px; }
+.hero .availability { font-size: 12px; }
+.hero-footnote p { font-size: 13px; }
+.discipline-strip > .wrap { font-size: 12px; }
+.eyebrow { font-size: 11px; }
+.section-heading h2 { font-size: 47px; }
+.section-description { font-size: 15px; }
+.repo-toolbar input, .repo-toolbar select { font-size: 14px; }
+.repo-results, .repo-results button, .repo-empty button { font-size: 13px; }
+.repo-notice { font-size: 12px; }
+.repo-card h3 { font-size: 22px; }
+.repo-card .repo-description { font-size: 15px; }
+.repo-kind, .repo-card-bottom { font-size: 12px; }
+.repo-empty p { font-size: 14px; }
+.portrait-note { font-size: 14px; }
+.portrait-frame figcaption span { font-size: 11px; }
+.portrait-index { font-size: 11px; }
+.contact h2 { font-size: 49px; }
+.contact .eyebrow, .contact-availability { font-size: 12px; }
+.contact-bottom .email { font-size: 26px; }
+.contact-bottom p { font-size: 14px; }
+.site-footer p, .site-footer > a:last-child, .site-footer .social-links a { font-size: 13px; }
+@media (max-width: 950px) and (min-width: 651px) {
+  .hero h1 { font-size: 50px; }
+  .hero-actions { flex-wrap: wrap; }
+  .brand { font-size: 21px; }
+}
+@keyframes portrait-turn { to { transform: rotate(360deg); } }
+@keyframes hero-enter { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy { animation: hero-enter .8s ease both; }
+  .portrait-art { animation: hero-enter 1s .1s ease both; }
+}
+@media (max-width: 950px) {
+  .hero { gap: 35px; }
+  .portrait-art { height: 445px; }
+  .portrait-mark { font-size: 78px; right: -1%; top: 3%; }
+  .portrait-note { left: -12px; bottom: 35px; padding: 13px 17px; }
+}
+@media (max-width: 650px) {
+  .hero { padding-block: 36px 55px; gap: 40px; }
+  .portrait-art { width: min(100%, 370px); height: auto; aspect-ratio: .9; margin-inline: auto; }
+  .portrait-frame { max-height: none; }
+  .portrait-mark { font-size: 78px; top: 0; }
+  .portrait-note { left: -4px; bottom: 39px; font-size: 13px; }
+  .portrait-index { bottom: -10px; font-size: 10px; }
+  .hero-description { font-size: 16px; }
+  .site-header { height: auto; min-height: 84px; flex-wrap: wrap; padding-block: 18px; }
+  .site-header .brand { font-size: 21px; }
+  .site-header nav { font-size: 13px; gap: 18px; }
+  .hero .intro { font-size: 21px; }
+  .hero h1 { font-size: clamp(41px, 11vw, 57px); }
+  .hero .availability { font-size: 10px; }
+  .hero-actions { flex-wrap: wrap; gap: 18px; }
+  .hero .social-links a { font-size: 13px; }
+  .discipline-strip > .wrap { font-size: 10px; }
+  .section-heading h2 { font-size: 38px; }
+  .section-description { font-size: 14px; }
+  .repo-toolbar select { font-size: 13px; }
+  .repo-results, .repo-results button { font-size: 12px; }
+  .repo-card h3 { font-size: 20px; }
+  .repo-card .repo-description { font-size: 14px; }
+  .repo-notice { font-size: 12px; }
+  .contact h2 { font-size: 33px; }
+  .contact-top { flex-wrap: wrap; }
+  .contact-top .eyebrow, .contact-top .contact-availability { font-size: 10px; }
+  .contact-bottom .email { font-size: 22px; overflow-wrap: anywhere; }
+  .site-footer p, .site-footer .social-links a { font-size: 12px; }
+  .repo-card { padding: 22px; }
+  .contact { border-radius: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .repo-card:hover, .button:hover, .skills span:hover, .portrait-frame:hover img { transform: none; }
+}

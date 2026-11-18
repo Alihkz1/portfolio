@@ -1,8 +1,14 @@
-Open index.html in any browser. No installation or server is required.
+Open index.html in your browser. No installation or server is required.
 
-English, left-to-right portfolio with responsive desktop and mobile layouts.
-Edit index.html to replace the sample name Ali, hello@example.com, skills, and conceptual projects.
-Edit styles.css to change colors, typography, spacing, or layout.
-Project descriptions expand using native HTML details elements.
-The contact button opens your mail application. No backend or contact form is connected.
-All visuals are CSS and inline SVG; the page works offline.
+English, left-to-right responsive portfolio. Edit index.html for your biography
+and skills; edit styles.css for colors, typography, layout and illustrations.
+
+Projects: 23 public repositories from github.com/alihkz1 are embedded in HTML.
+projects.js refreshes every public repository, including forks and archives,
+using paginated GitHub API requests. Search, language filters and sorting work
+on the full collection. Offline or rate-limited requests keep the saved cards.
+No access token is used. Browser JavaScript enables refresh and filtering.
+
+Social links: GitHub alihkz1; LinkedIn, Instagram and Telegram alihkz.
+The contact link opens Telegram. No email address or backend is configured.
+All illustrations are CSS and inline SVG; no external assets are required.
