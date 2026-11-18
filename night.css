@@ -1,0 +1,111 @@
+/* Night sky: quiet scenery, readable glass surfaces, no external assets. */
+:root {
+  color-scheme: dark;
+  --paper: #090f20;
+  --ink: #eef2ff;
+  --muted: #a6b3cd;
+  --orange: #b9c8ff;
+  --line: #b7caff25;
+  --olive: #202b46;
+}
+body {
+  background: radial-gradient(ellipse at 85% 8%, #24335475, transparent 38%), linear-gradient(180deg, #10192e, #090f20 65%);
+  color: var(--ink);
+  isolation: isolate;
+}
+::selection { background: #b9c8ff; color: #090f20; }
+.night-sky { position: absolute; inset: 0 0 auto; height: 1100px; max-height: 150vh; overflow: hidden; pointer-events: none; z-index: -1; }
+.sky-stars { position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 18px 42px, #e1eaffaa 95%, transparent), radial-gradient(1px 1px at 92px 114px, #e1eaff66 95%, transparent), radial-gradient(1.5px 1.5px at 208px 73px, #e1eaffaa 95%, transparent), radial-gradient(1px 1px at 162px 211px, #e1eaff55 95%, transparent); background-size: 267px 251px; mask-image: linear-gradient(#000 50%, transparent); }
+.sky-stars-soft { transform: translate(53px, 71px); opacity: .4; background-size: 357px 331px; animation: star-breathe 7s ease-in-out infinite alternate; }
+.sky-moon {
+  position: absolute; top: 120px; right: max(4%, calc((100vw - 1280px)/2)); width: clamp(95px, 13vw, 170px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(ellipse at 30% 32%, #8c99ae25 0 10%, transparent 11%), radial-gradient(ellipse at 64% 63%, #8796ad22 0 15%, transparent 16%), radial-gradient(circle at 68% 27%, #8f9bb025 0 7%, transparent 8%), radial-gradient(circle at 36% 35%, #f4f5e9, #d1d9df 62%, #7a8b9e);
+  box-shadow: inset -14px -9px 22px #28344b50, 0 0 50px #c3d6fb18, 0 0 120px #a9c5ff12;
+  opacity: .85;
+}
+.site-header { border-color: var(--line); }
+.brand { font-weight: 550; letter-spacing: -.7px; }
+.brand-icon { background: #c6d3ff; color: #10192e; }
+.site-header nav, .header-contact { color: #c1cce0; }
+.header-contact { border-color: #8092b2; }
+.site-header nav a:hover, .text-link:hover { color: #fff; }
+.hero { padding-block: 80px 85px; }
+.hero h1 { font-weight: 550; }
+.underlined::after { height: 2px; opacity: .65; border-radius: 0; transform: none; }
+.hero .intro { color: #c6d1e9; }
+.hero .availability { color: #b2c1dc; letter-spacing: .1em; }
+.availability > span { background: #b6caff; box-shadow: 0 0 12px #b6caff70; }
+.hero-description, .section-description { color: #acb9d2; }
+.hero .button { background: #d5deff; color: #111b31; border: 1px solid #f1f4ff66; box-shadow: 0 6px 24px #0002; }
+.hero .button:hover { background: #ecf0ff; }
+.social-links a, .site-footer .social-links a { color: #b8c6df; }
+.social-links a:hover { color: white; border-color: #b9c8ff; }
+.portrait-art { height: 480px; }
+.portrait-art::before { display: none; }
+.portrait-frame { width: 87%; aspect-ratio: .89; max-height: 440px; border: 1px solid #d3e0ff38; border-radius: 28px; transform: none; box-shadow: 0 24px 70px #0005; background: #172338; }
+.portrait-frame img { object-position: 50% 40%; }
+.portrait-frame figcaption { transform: none; }
+.portrait-frame figcaption span { color: #c7d4eb; }
+.portrait-frame::after { background: linear-gradient(transparent, #080f20eb); }
+.portrait-index { color: #8d9fbd; letter-spacing: .12em; }
+.discipline-strip { background: #b7caff04; border-color: var(--line); }
+.discipline-strip > .wrap { color: #9daecc; }
+.discipline-strip i { color: #798eaf; }
+.eyebrow { color: #9dadcc; }
+.repo-toolbar input, .repo-toolbar select { background: #162139; border-color: #c1d2ff2b; color: #e6edff; border-radius: 12px; }
+.repo-toolbar input::placeholder { color: #97a8c5; }
+.repo-toolbar select option { background: #162139; color: #e6edff; }
+.repo-results, .repo-notice { color: #9dadc9; }
+.repo-results a:hover { color: #e4ebff; }
+.repo-results button, .repo-empty button { background: #c1d2ff12; color: #d8e2ff; border-color: #c1d2ff30; }
+.repo-card, .contact {
+  background: #26355059;
+  border: 1px solid #c1d2ff24;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 #fff05, 0 10px 35px #00000014;
+}
+.repo-card { border-radius: 18px; }
+.repo-card:hover { background: #34456366; border-color: #c1d2ff50; box-shadow: 0 16px 35px #0002; transform: translateY(-4px); }
+.repo-card h3 a { color: #e6edff; }
+.repo-card h3 a:hover { color: #bdceff; }
+.repo-icon { color: #bdceff; background: #c1d2ff0d; }
+.repo-kind { color: #a8b9d6; border-color: #c1d2ff2b; }
+.repo-card .repo-description { color: #aebdd5; }
+.repo-card-bottom { border-color: #c1d2ff1f; color: #b0bfd9; }
+.repo-language i { background: #a5b6d1; }
+.repo-empty { border-color: #c1d2ff38; color: #b3c2dd; }
+.repo-empty h3 { color: #e6edff; }
+.contact { border-radius: 24px; color: #e6edff; }
+.contact::before { display: none; }
+.contact .eyebrow, .contact-availability { color: #a9bad8; }
+.contact-availability i { background: #b6caff; box-shadow: 0 0 12px #b6caff40; }
+.contact h2 > span { color: #b9caff; }
+.contact-bottom { border-color: var(--line); }
+.contact-bottom p { color: #a5b6d1; }
+.contact-bottom .email:hover { color: #b9caff; }
+.site-footer { color: #9eafcc; }
+.site-footer p { color: #9eafcc; }
+.skip { background: #d5deff; color: #111b31; }
+:focus-visible { outline-color: #c3d3ff; }
+@keyframes star-breathe { from { opacity: .25; } to { opacity: .65; } }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .repo-card, .contact { background: #1b2840; }
+}
+@media (max-width: 950px) {
+  .portrait-art { height: 410px; }
+  .sky-moon { top: 130px; right: -25px; opacity: .5; }
+}
+@media (max-width: 650px) {
+  .hero { padding-block: 40px 55px; }
+  .hero h1 { font-size: clamp(41px, 10.8vw, 57px); }
+  .portrait-art { height: auto; aspect-ratio: .95; }
+  .portrait-frame { width: 90%; }
+  .sky-moon { top: 135px; right: -25px; width: 120px; opacity: .28; }
+  .portrait-index { font-size: 9px; }
+  .repo-card, .contact { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sky-stars-soft { animation: none; }
+  .repo-card:hover { transform: none; }
+}

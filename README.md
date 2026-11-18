@@ -8,14 +8,14 @@ A personal portfolio built with HTML, CSS, and vanilla JavaScript. A portrait-le
 
 <img src="assets/ali-portrait.jpg" alt="Ali Hosseinkhani" width="180">
 
-The interface uses warm neutral colors, olive and orange accents, rounded project cards, and subtle animations. The layout is responsive and written in English with left-to-right text.
+The interface uses a night-sky palette, glass-style project cards, a background moon and stars, and subtle animations. The layout is responsive and written in English with left-to-right text.
 
 ## Features
 
 - **Live GitHub projects:** fetches my public repositories automatically, including forks and archived projects.
 - **Search and discovery:** search repository names, descriptions, languages, and topics; filter by language; sort by recent activity, stars, or name.
 - **Offline fallback:** an embedded repository snapshot keeps projects visible when GitHub is unreachable or rate-limited.
-- **Motion:** scroll reveals, an animated accent, and hover interactions, with support for reduced-motion preferences.
+- **Motion:** scroll reveals, gently twinkling stars, and hover interactions, with support for reduced-motion preferences.
 - **Accessibility:** semantic sections, descriptive image text, keyboard focus indicators, a skip link, and status messages for repository updates.
 - **Direct contact:** GitHub, LinkedIn, Instagram, and Telegram links.
 - **No build step:** no framework, package installation, database, or backend required.
@@ -74,6 +74,7 @@ If a request fails, times out, or reaches GitHub's public API rate limit, the cu
 | Name, introduction, contact links, and metadata | `index.html` |
 | Profile photo | Replace `assets/ali-portrait.jpg` and update its alt text in `index.html` |
 | Colors and base layout | `styles.css` |
+| Night palette, moon, stars, and glass surfaces | `night.css` |
 | Typography, portrait styling, and visual refinements | `refinements.css` |
 | GitHub username | Update the `user` constant in `projects.js` |
 | Saved repository collection | Update the cards and `github-repo-data` JSON in `index.html` |
@@ -83,7 +84,7 @@ When changing the GitHub account, also update the saved repository collection an
 
 ## Deployment
 
-This repository is a static website. Serve the repository root, including `index.html`, both stylesheets, both JavaScript files, and the `assets` directory. No compilation or generated output directory is required.
+This repository is a static website. Serve the repository root, including `index.html`, all stylesheets, both JavaScript files, and the `assets` directory. No compilation or generated output directory is required.
 
 The live deployment is hosted on **[Vercel](https://portfolio-henna-one-60.vercel.app/)**.
 
